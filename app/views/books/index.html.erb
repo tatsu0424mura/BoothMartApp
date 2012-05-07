@@ -1,0 +1,32 @@
+<h1>Course Packs and Text Books for Sale</h1>
+
+<p style = "color: red"><%= flash[:notice]%></p>
+
+<%= link_to "<- Back", boothmarts_url%><br/>
+<%= link_to "Sell a Course Pack", new_book_url%>
+
+<table>
+  <tr>
+	<th> Course</th>
+	<th> Title</th> 
+	<th> Faculty(Last, First)</th>
+	<th> Price</th>
+  </tr>
+<% @books.each do |book| %>
+  <tr>
+    <td><%= book.number%></td>
+    <td><%= book.title%></td>
+    <td><%= book.faculty_last%> , <%= book.faculty_first%> </td>
+    <td>$<%= book.price%>.00 </td>
+    <td><%= link_to "Details", book_url(book.id)%></td>
+    <!-- <td>|<a href = "<%#= book_url(book.id)%>">Details</a></td> -->
+    <td>|<%= link_to "Edit", edit_book_url(book.id)%></td>
+    <!-- <td>|<a href= "<%#= edit_book_url(book.id)%>">Edit</a></td> -->
+    <td>| <%= link_to "Delete", book_url(book.id), 
+          :method => :delete, :confirm => "Do you want to delete?" %>
+ </tr>
+
+
+<%end%>
+</table>
+

@@ -1,0 +1,14 @@
+<%= form_for @book do |form|%>
+	<%= form.label :number, "Course Number:"%>
+	<%= form.text_field :number%><br/>
+	<%= form.label :title, "Course Title:"%>
+	<%= form.text_field :title%><br/>
+	<%= form.label :faculty_last, "Faculty Last Name:"%>
+	<%= form.text_field :faculty_last%><br/>
+	<%= form.label :faculty_first, "Faculty First Name:"%>
+	<%= form.text_field :faculty_first%><br/>
+	<%= form.label :price, "Price: $ "%>
+	<%= form.text_field :price%><br/>
+	<%= form.submit "Add to List"%>
+
+<%end%>
