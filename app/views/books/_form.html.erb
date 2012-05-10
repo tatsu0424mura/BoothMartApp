@@ -14,15 +14,25 @@
 
 
 	<%= form.label :number, "Course Number:"%>
-	<%= form.text_field :number, :placeholder => "ex. 33001"%><br/>
+	<%= form.text_field :number, :placeholder => "33001"%><br/>
 	<%= form.label :title, "Course Title:"%>
-	<%= form.text_field :title, :placeholder => "ex. Microeconomics"%><br/>
+	<%= form.text_field :title, :placeholder => "Microeconomics"%><br/>
 	<%= form.label :faculty_last, "Faculty Last Name:"%>
-	<%= form.text_field :faculty_last, :placeholder => "ex. Smith"%><br/>
+	<%= form.text_field :faculty_last, :placeholder => "Smith"%><br/>
 	<%= form.label :faculty_first, "Faculty First Name:"%>
-	<%= form.text_field :faculty_first, :placeholder => "ex. Adam"%><br/>
+	<%= form.text_field :faculty_first, :placeholder => "Adam"%><br/>
 	<%= form.label :price, "Price: $ "%>
-	<%= form.number_field :price, :placeholder => "ex. 40"%><br/>
+	<%= form.number_field :price, :placeholder => "40"%><br/>
+	<%= form.label :quarter, "Quarter:  "%>
+	<%= form.text_field :quarter, :placeholder => "Winter"%><br/>
+	<%= form.label :year, "Year:  "%>
+	<%= form.number_field :year, :placeholder => "2012"%><br/>
+	<%= form.label :name, "Seller's name:  "%>
+	<%= form.text_field :name, :placeholder => "First & Last Name"%><br/>
+	<%= form.label :email, "Booth Email:"%>
+	<%= form.text_field :email, :placeholder => "xxx@chicagobooth.edu"%><br/>
+	<%= form.label :tel, "Phone Number:  "%>
+	<%= form.text_field :tel, :placeholder => "123-456-789"%><br/>
 	<%= form.submit "Add to List"%> or <%= link_to 'Cancel', :back %>
 
 <%end%>

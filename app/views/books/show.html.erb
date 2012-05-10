@@ -3,5 +3,9 @@
 <%= link_to "<- Back to List", :back%>
 
 <p><%= @book.number%> <%= @book.title%></p>
-<p>Seller Name:</p>
-<p>Seller Contact:</p>
+<p>Professor: <%= @book.faculty_first%> <%= @book.faculty_last%></p>
+<p>Year: <%= @book.quarter%> <%= @book.year%> </p>
+<p>Price: $ <%= @book.price%>  </p>
+<p>Seller Name: <%= @book.name%></p>
+<p>Seller Email:<%= @book.email%></p>
+<p>Seller Phone:<%= @book.tel%></p>

@@ -44,6 +44,11 @@ end
    @book.faculty_last = params[:book][:faculty_last]
    @book.faculty_first = params[:book][:faculty_first]
    @book.price = params[:book][:price]
+   @book.year = params[:book][:year]
+   @book.quarter = params[:book][:quarter]
+   @book.name = params[:book][:name]
+   @book.email = params[:book][:email]
+   @book.tel = params[:book][:tel]
    
    respond_to do |format|
      if @book.save
