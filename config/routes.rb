@@ -1,5 +1,7 @@
 BoothMartApp::Application.routes.draw do
   
+  resources :events
+
     get "boothmart" => "boothmarts#index", :as => :root
     
     resources :books, :apartments
