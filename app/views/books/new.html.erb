@@ -2,13 +2,13 @@
 
 <p style = "color: red"><%= flash[:alert]%></p>
 
-<ul style = "color:red">
-<% @book.errors.full_messages.each do |msg|%>
-  <li><%= msg%></li>
-  <%end%>
-</ul>
+<!-- <ul style = "color:red">
+<%# @book.errors.full_messages.each do |msg|%>
+  <li><%#= msg%></li>
+  <%#end%>
+</ul> -->
 
-<%= link_to "<- Back", boothmarts_url%>
+<%= link_to "<- Back to List", :back%>
 
 <%= render "form"%>
 

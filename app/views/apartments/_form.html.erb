@@ -1,0 +1,69 @@
+<%= form_for(@apartment) do |f| %>
+  <% if @apartment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@apartment.errors.count, "error") %> prohibited this apartment from being saved:</h2>
+
+      <ul>
+      <% @apartment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, :placeholder => "First Last" %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email, :placeholder => "xxx@chicagobooth.edu" %>
+  </div>
+  <div class="field">
+    <%= f.label :tel %><br />
+    <%= f.text_field :tel, :placeholder => "123-456-789" %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city, :placeholder => "Chicago" %>
+  </div>
+  <div class="field">
+    <%= f.label :neighborhood %><br />
+    <%= f.text_field :neighborhood,:placeholder => "Downtown, Hyde Park" %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address, :placeholder => "5807 South Woodlawn Avenue." %>
+  </div>
+  <div class="field">
+    <%= f.label :housing_type %><br />
+    <%= f.text_field :housing_type, :placeholder => "Studio, Convertible, 1BR, 2BR"%>
+  </div>
+  <div class="field">
+    <%= f.label :pictures %><br />
+    <%= f.text_field :pictures, :placeholder => "Yes, No" %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br />
+    <%= f.date_select :end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :rent %><br />
+    <%= f.number_field :rent %>
+  </div>
+  <div class="field">
+    <%= f.label :pets %><br />
+    <%= f.text_field :pets, :placeholder => "Yes, No, Cats only, etc" %>
+  </div>
+  <div class="field">
+    <%= f.label :descriptions %><br />
+    <%= f.text_field :descriptions , :placeholder => "Anything else you want to add"%>
+  </div>
+  <div class="actions">
+    <%= f.submit "Add to list"%>
+  </div>
+<% end %>

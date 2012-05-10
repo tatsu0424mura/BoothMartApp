@@ -1,0 +1,37 @@
+<br/>
+<%= link_to "<- Home", boothmarts_url%>
+
+<h1>List of Available Apartments</h1>
+
+<table>
+  <tr>
+    <th>City</th>
+    <th>Neighborhood</th>
+    <th>Housing<br/>type</th>
+    <th>Start<br/>date</th>
+    <th>End<br/>date</th>
+    <th>Rent <br/>(/month)</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @apartments.each do |apartment| %>
+  <tr>
+    <td><%= apartment.city %></td>
+    <td><%= apartment.neighborhood %></td>
+    <td><%= apartment.housing_type %></td>
+    <td><%= apartment.start_date %></td>
+    <td><%= apartment.end_date %></td>
+    <td> $<%= apartment.rent %></td>
+
+    <td><%= link_to 'Details', apartment %></td>
+    <td><%= link_to 'Edit', edit_apartment_path(apartment) %></td>
+    <td><%= link_to 'Delete', apartment, confirm: 'Do you want to delete?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Add a New Apartment to List', new_apartment_url %>
