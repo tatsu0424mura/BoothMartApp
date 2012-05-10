@@ -7,7 +7,6 @@ gem 'annotate'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development do
-   gem 'quiet_assets'
    gem 'sqlite3'
 end
 
