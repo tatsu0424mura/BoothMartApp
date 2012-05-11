@@ -1,11 +1,9 @@
 BoothMartApp::Application.routes.draw do
-  root :to => "boothmarts#index"
-   
-  resources :events
+    root :to => "boothmarts#index"
 
     get "boothmart" => "boothmarts#index", :as => :root
     
-    resources :books, :apartments
+    resources :books, :apartments, :events
     
     #     get "boothmart/books" => "books#index", :as => :books
     #          
