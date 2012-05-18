@@ -1,7 +1,12 @@
 BoothMartApp::Application.routes.draw do
-    root :to => "boothmarts#index"
+    root :to => "sessions#new"
+    
+    get "sessions" => "sessions#new", :as => :root
+    post "sessions" => "sessions#create"
+    
+    get "logout" => "sessions#destroy", :as => :logout
 
-    get "boothmart" => "boothmarts#index", :as => :root
+    get "boothmart" => "boothmarts#index", :as => :boothmarts
     
     resources :books, :apartments, :events
     
